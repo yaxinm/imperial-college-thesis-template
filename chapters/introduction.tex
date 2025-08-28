@@ -1,0 +1,40 @@
+\chapter{Introduction}\label{chapter:intro}
+Let me introduce you to defining your own macros (Section~\ref{sec:intro:macros}) and customizing the template using preamble (Section~\ref{sec:intro:layouts}).
+
+
+\section{Basic commands}
+Cite things like \citet{adrian1979ConditionalEddiesIsotropic} and \citep{agostini2020ExplorationPredictionFluid}.
+
+\begin{itemize}
+    \item figure
+    \item table
+    \item algorithm
+    \item math
+    \item code
+\end{itemize}
+
+
+\section{Defining macros}\label{sec:intro:macros}
+Define all new commands that you plan to use repeatedly in \emph{mymacros.sty}.
+
+At the top of \emph{main.tex}, we import our command file by using the line \lstinline[language=tex]!\usepackage{mymacros}!.
+When writing equations, we can use the commands we defined in \emph{mymacros.sty}.
+\begin{equation}
+    \sym{MSE} = \| \mat{A} \|^2_2
+\end{equation}
+\begin{equation*}
+    \Re = 1/\nu
+\end{equation*}
+
+We can use our other defined commands as well, such as \lstinline[language=tex]!\comment! \comment{to make text red.}
+
+
+\section{Changing layouts and working with preamble}\label{sec:intro:layouts}
+Customizable features 
+\begin{itemize}
+    \item Page margin
+    \item import packages
+    \item font and fontsize
+    \item bibliography style, and the page format
+    \item title page style
+\end{itemize}

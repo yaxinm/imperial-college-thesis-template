@@ -1,0 +1,153 @@
+\usepackage[a4paper,top=2.3cm,bottom=2.3cm,left=2.3cm,right=2.3cm]{geometry}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+% \usepackage{kpfonts}
+% \renewcommand*\familydefault{\sfdefault}
+% \renewcommand*\familydefault{\rmdefault}
+% \usepackage{tgbonum}
+% \renewcommand*\familydefault{cmr}
+% nice fonts Computer Modern Sans Serif (cmss), Computer Modern Roman (cmr)
+% \usepackage{gfsartemisia-euler}
+\usepackage{libertinus}
+
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{nomencl}
+\usepackage{amsmath}
+\usepackage{empheq} %equations is a large bracket
+\usepackage{algorithm2e}
+\usepackage{csquotes}
+\usepackage{siunitx}
+\usepackage{blindtext}
+\usepackage{textcomp}
+\usepackage[compact]{titlesec} 
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{float}
+\usepackage{placeins}
+\floatstyle{plaintop}
+\usepackage{import}
+\usepackage{svg}
+\restylefloat{table} %stops latex re positioning tables
+\usepackage{chemformula}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{CJKutf8}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks   = true, %Colours links instead of ugly boxes
+    urlcolor     = blue, %Colour for external hyperlinks
+    linkcolor    = Blue, %Colour of internal links
+    citecolor   = black %Colour of citations
+}
+
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[toc,page]{appendix}
+\usepackage{cancel}
+\usepackage{booktabs}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{parskip}
+\usepackage{lipsum}
+\usepackage{soul}
+\usepackage{pdflscape}
+%\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+\linespread{1.3} 
+% 1.3 linespread=1.3 is one-and-half spacing
+
+%% Use natbib style
+\usepackage[compress, authoryear]{natbib}
+% \usepackage[sort&compress, square, authoryear]{natbib}
+\bibliographystyle{agsm}
+\renewcommand\harvardyearleft{\unskip, }
+\renewcommand\harvardyearright[1]{.}
+\renewcommand*{\bibfont}{\footnotesize}
+\setlength{\bibsep}{1em}
+\setlength{\bibhang}{3em}
+
+% \let\endtitlepage\relax %allows text to follow straight after title section
+
+
+\usepackage{tikz} %plot neural networks
+\usetikzlibrary{positioning}
+
+\numberwithin{figure}{chapter}
+\numberwithin{table}{chapter}
+\numberwithin{equation}{chapter}
+
+\usepackage{listings}
+\lstset{
+    language=python,
+    basicstyle=\ttfamily\small,
+    backgroundcolor=\color{lightgray}, 
+    breakatwhitespace=false,
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    % numbers=left,                    
+    numbersep=5pt,    
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false, 
+}
+\usepackage{algorithm2e}
+
+% -------- Fancy page headers:
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.49998pt}
+\pagestyle{fancy}
+\fancyhf{}
+
+% \leftmark is chapter title, \rightmark is section title
+\fancyhead[L]{\rmfamily{\textit{\nouppercase{\leftmark}}}}
+% \lhead{\slshape\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrule}{\hbox to\headwidth{
+  \color{Blue}\leaders\hrule height \headrulewidth\hfill
+}}
+\fancyhead[L]{\raisebox{-.5\baselineskip}[0pt][0pt]{\textit{\nouppercase{\leftmark}}}}
+\setlength{\headheight}{24.64995pt}
+% \renewcommand{\footrulewidth}{1pt}
+
+% \lfoot{\thepage}
+\rfoot{\thepage}
+% -------- Finish setting up fancy page headers
+
+% \usepackage{sectsty}
+% \chapterfont{\color{Blue}} 
+% \sectionfont{\color{black}}
+
+
+\makeatletter
+\renewcommand{\maketitle}{
+    \clearpage
+    \thispagestyle{empty}
+    \pagenumbering{gobble}
+    \begin{center}
+
+    \pagestyle{empty}
+    \phantom{.}  %necessary to add space on top before the title
+    \Large{Department of \it{Your Department}} \\
+    \Large{Imperial College London}
+    
+    \vspace{5cm}
+    {\Huge \bf \@title\par}
+    \vspace{2.5cm}
+
+    {\large \@author}\\[1cm]
+
+    {\large\@date}
+
+    \vfill
+    \parbox{5in}{\centering{\small{Submitted in partial fulfilment of the requirements for the degree of Doctor of Philosophy in the Department of \it{Your Department}.}}}
+     
+
+    \end{center}
+}\makeatother
+
