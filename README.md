@@ -1,6 +1,11 @@
 # Thesis Template
 
+Please see instructions in **main.pdf**.
 
+## How to compile
+
+Upload all files into an Overleaf project, or download 
+Press **compile** on Overleaf, or you will need the following command to compile.
 
 
 ## Specific instructions for documents with Nomenclature

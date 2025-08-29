@@ -13,10 +13,13 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[dvipsnames]{xcolor}
+\definecolor{ImperialBlue}{RGB}{0,0,205}
 \usepackage{nomencl}
 \usepackage{amsmath}
 \usepackage{empheq} %equations is a large bracket
 \usepackage{algorithm2e}
+\RestyleAlgo{ruled}
+\SetCommentSty{normalsize}
 \usepackage{csquotes}
 \usepackage{siunitx}
 \usepackage{blindtext}
@@ -38,8 +41,8 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks   = true, %Colours links instead of ugly boxes
-    urlcolor     = blue, %Colour for external hyperlinks
-    linkcolor    = Blue, %Colour of internal links
+    urlcolor     = ImperialBlue, %Colour for external hyperlinks
+    linkcolor    = ImperialBlue, %Colour of internal links
     citecolor   = black %Colour of citations
 }
 
@@ -106,22 +109,15 @@
 
 % \leftmark is chapter title, \rightmark is section title
 \fancyhead[L]{\rmfamily{\textit{\nouppercase{\leftmark}}}}
-% \lhead{\slshape\nouppercase{\leftmark}}
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\headrule}{\hbox to\headwidth{
-  \color{Blue}\leaders\hrule height \headrulewidth\hfill
+  \color{ImperialBlue}\leaders\hrule height \headrulewidth\hfill
 }}
 \fancyhead[L]{\raisebox{-.5\baselineskip}[0pt][0pt]{\textit{\nouppercase{\leftmark}}}}
 \setlength{\headheight}{24.64995pt}
-% \renewcommand{\footrulewidth}{1pt}
 
-% \lfoot{\thepage}
 \rfoot{\thepage}
-% -------- Finish setting up fancy page headers
 
-% \usepackage{sectsty}
-% \chapterfont{\color{Blue}} 
-% \sectionfont{\color{black}}
 
 
 \makeatletter
