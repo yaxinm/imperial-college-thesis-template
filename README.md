@@ -1,5 +1,6 @@
 # Thesis Template
 
+This template meets the college guidelines for 2025.
 Please see instructions in **main.pdf**.
 
 ## How to compile
