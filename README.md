@@ -4,8 +4,20 @@ Please see instructions in **main.pdf**.
 
 ## How to compile
 
-Upload all files into an Overleaf project, or download 
-Press **compile** on Overleaf, or you will need the following command to compile.
+### Overleaf
+
+Upload all files into an Overleaf project, then press **compile**.
+
+### Locally
+You will need to install latex locally, please follow the instruction on the [LaTeX website](https://www.latex-project.org/get/).
+If you are using "main.tex" as your main document (which is the default of this repo), run the following command.
+```
+pdflatex main
+bibtex main
+pdflatex main
+pdflatex main
+```
+It will give a warning if you haven't cited anything yet.
 
 
 ## Specific instructions for documents with Nomenclature
@@ -28,7 +40,7 @@ pdflatex main
 
 #### VSCode
 
-Install the extension **latex-workshop**.
+If you are using **VSCode** with the extension **latex-workshop** to compile, you may need to define a new recipe.
 Add the following to LaTeX `latex-workshop.latex.tools`.
 ```
 {
