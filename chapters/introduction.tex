@@ -1,12 +1,13 @@
 \chapter{Introduction}\label{chapter:intro}
-Let me introduce you to defining your own macros (Section~\ref{sec:intro:macros}) and customizing the template using preamble (Section~\ref{sec:intro:layouts}).
+First, the most command things in a thesis (Section~\ref{sec:intro:basic-commands}).
+Then, let me introduce you to defining your own macros (Section~\ref{sec:intro:macros}) and customizing the template using preamble (Section~\ref{sec:intro:layouts}).
 
 
-\section{Basic commands}
+\section{Basic commands}\label{sec:intro:basic-commands}
 
-Here are some examples of the basic things.
+Here are some examples of things we usually need for a thesis.
 \begin{itemize}
-    \item Citing things
+    \item Citing things and cross-referencing
     \item Figures
     \item Tables
     \item Algorithm
@@ -16,8 +17,11 @@ Here are some examples of the basic things.
 
 Cite things like \citet{adrian1979ConditionalEddiesIsotropic} and \citep{agostini2020ExplorationPredictionFluid}.
 
+Cross-reference by using \lstinline[language=tex]!\label{label}! \lstinline[language=tex]!\ref{label}!. 
+There are already plenty of examples in this document.
+
 Insert a figure (like Figure~\ref{fig:example}), by using the \lstinline[language=tex]!figure! environment.
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=3in]{figs/example_image.jpg}
     \caption{
@@ -27,7 +31,7 @@ Insert a figure (like Figure~\ref{fig:example}), by using the \lstinline[languag
 \end{figure}
 
 Insert a table (like Table~\ref{tab:example}), by using the \lstinline[language=tex]!table! environment.
-\begin{table}[h]
+\begin{table}
     \centering
     \caption{An example table}\label{tab:example}
     \begin{tabular}{|c|c|}
@@ -38,6 +42,11 @@ Insert a table (like Table~\ref{tab:example}), by using the \lstinline[language=
         \hline
     \end{tabular}
 \end{table}
+
+\FloatBarrier%
+Figures and tables are floats, meaning that they may get moved to a different page as you write depending on how much space there is. 
+Of course, there are other things that are also floats.
+Use \lstinline[language=tex]!\FloatBarrier! to place all the floats defined before this line above this line in the text. 
 
 Write an algorithm with the package \emph{algorithm2e}, which we have already included in the \emph{preamble.sty}.
 
@@ -59,14 +68,9 @@ Write an algorithm with the package \emph{algorithm2e}, which we have already in
 
 \out $\gets \mat{A} +\alpha \mat{B}$ \tcp{start with the output of the network}
 
-\KwRet\out
+\KwRet\out%
 
 \end{algorithm}
-
-\FloatBarrier%
-Figures, tables and algorithms are all floats, meaning that they may get moved to a different page as you write depending on how much space there is. 
-Of course, there are other things that are also floats.
-Use \lstinline[language=tex]!\FloatBarrier! to place all the floats defined before this line above this line in the text. 
 
 Write an equation inline like this: $5\sin{\theta}$, or like 
 \begin{equation}
@@ -118,11 +122,16 @@ We can use our other defined commands as well, such as \lstinline[language=tex]!
 
 
 \section{Changing layouts and working with preamble}\label{sec:intro:layouts}
-Customizable features 
+We use \emph{preamble.sty} to customize the style of the file and include it at the beginning of \emph{main.tex}.
+Here are a list of things you can easily customize in this template. 
 \begin{itemize}
-    \item Page margin
-    \item import packages
-    \item font and fontsize
-    \item bibliography style, and the page format
-    \item title page style
+    \item Title page style
+    \item Page margin, line spacing, page headers
+    \item Font and font size
+    \item Colours, and colour of links/citations\ldots
+    \item Bibliography and reference style
+    \item Table style
+    \item Default coding language, and the default display style for blocks of codes
 \end{itemize}
+Use the comments in \emph{preamble.sty} to find out how to change the styles of things.
+Of course, you can customize a lot more, but this template only set up a few features.
